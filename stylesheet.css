@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #CCC;
+}
+#header {
+    background-color: rgba(237, 56, 43, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid rgb(105, 105, 105);
+    width: calc(100% - 35px);
+    height: 75px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    padding-right: 35px;
+}
+#about {
+    font-size: 1.5em;
+    align-self: center;
+    padding: 20px 15px 20px 15px;
+}
+#about:hover {
+    background-color: rgb(105, 105, 105);
+    color: #CCC;
+    cursor: pointer;
+}
+#about-frame {
+    display: none;
+    margin: 100px auto auto auto;
+    align-self: center;
+    background-color: #888;
+    width: 500px;
+    height: 600px;
+    text-align: center; /* pt centrarea butonului*/
+}
+#hide-btn {
+    align-self: center; 
+    padding: 3px;
+}
+body {
+    background-color: aquamarine;
+}
+#main {
+    margin-top: 77px;
+    margin-bottom: 79px;
+}
+#footer {
+    background-color: rgb(105, 105, 105);
+    height: 75px;
+    border-top: 4px solid rgba(237, 56, 43, 1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 70px);
+    display: flex;
+    justify-content: space-between;
+    color: #CCC;
+    align-items: center;
+    padding: 0 35px 0 35px;
+}

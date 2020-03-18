@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guessing ball game</title>
+    <meta charset="utf-8">
+    <meta name="description" content="a guessing ball game">
+    <meta name="author" content="Radu Harangus">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta name="keywords" content="html, css, js, javascript, game, animation, guess, ball">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+</head>
+<body>
+    <header id="header">
+        <span id="about" onclick="OpenCloseAboutWindow()">About</span>
+    </header>
+    <div id="about-frame">
+            <iframe src="about.html" width="100%" height="100%"></iframe>
+            <br>
+            <button id="hide-btn" onclick="OpenCloseAboutWindow()">Hide</button>
+    </div>
+    <main id="main">
+        <form>
+            <label for="input-all-balls">Total number of balls (2 - 50):</label>
+            <input type="number" min="2" max="50" id="input-all-balls" name="input-all-balls" value="10">
+            <br>
+            <label for="range">Set the ratio between blue and red balls: </label>
+            <input type="range" id="range" name="range" min="0" max="document.getElementById('input-all-balls').value">
+                <b style="color:blue;"> Blue: <span id="outputBlue"></span></b><b style="color:red;"> Red: <span id="outputRed"></span></b>
+        </form>
+    </main>
+    <footer id="footer">
+        <span id="contact-links"><pre>Open for collaboration    <a href="https://github.com/Radoogle" target="_blank"><i class="fab fa-github"></i> GitHub</a>   <a href="https://www.linkedin.com/in/radu-harangus-41580938/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></pre></span>
+        <a href="#">&copy; Radu Harangus 2020</a>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+</html>
