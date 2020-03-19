@@ -12,22 +12,32 @@
 </head>
 <body>
     <header id="header">
-        <span id="about" onclick="OpenCloseAboutWindow()">About</span>
+        <span id="about" onclick="openCloseAboutWindow()">About</span>
     </header>
     <div id="about-frame">
             <iframe src="about.html" width="100%" height="100%"></iframe>
             <br>
-            <button id="hide-btn" onclick="OpenCloseAboutWindow()">Hide</button>
+            <button id="hide-btn" onclick="openCloseAboutWindow()">Hide</button>
     </div>
     <main id="main">
-        <form>
+        <form onsubmit="go()">
             <label for="input-all-balls">Total number of balls (2 - 50):</label>
             <input type="number" min="2" max="50" id="input-all-balls" name="input-all-balls" value="10">
             <br>
             <label for="range">Set the ratio between blue and red balls: </label>
             <input type="range" id="range" name="range" min="0" max="document.getElementById('input-all-balls').value">
                 <b style="color:blue;"> Blue: <span id="outputBlue"></span></b><b style="color:red;"> Red: <span id="outputRed"></span></b>
+            <br>
+            <button type="submit" id="submit">GO!</button>
         </form>
+        <div id="choose-container">
+            <form id="radio-choose-color">
+                <input type="radio" name="blue" id="chose-blue" checked>
+                <label for="chose-blue"><b style="color:blue;">Blue</b></label>
+                <input type="radio" name="red" id="chose-red">
+                <label for="chose-red"><b style="color:red;">Red</b></label>
+            </form>
+        </div>
     </main>
     <footer id="footer">
         <span id="contact-links"><pre>Open for collaboration    <a href="https://github.com/Radoogle" target="_blank"><i class="fab fa-github"></i> GitHub</a>   <a href="https://www.linkedin.com/in/radu-harangus-41580938/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></pre></span>

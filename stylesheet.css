@@ -49,6 +49,10 @@ body {
     margin-top: 77px;
     margin-bottom: 79px;
 }
+/*#choose-container {
+    display: none;
+}*/
+
 #footer {
     background-color: rgb(105, 105, 105);
     height: 75px;
