@@ -56,17 +56,17 @@ function go() {
     let color;
     gameOn = true;
     document.getElementById("choose-container").style.display = "block";
-    while (total-- > 0) {
-        color = randomColor();
-        let form = document.getElementById("radio-choose-color");
-        form.onchange = function() {
-            let choice = form.value;
-            alert(choice);
-        }
-        
-        alert("next");
-        
-        }
+//    while (total-- > 0) {
+//        color = randomColor();
+//        let form = document.getElementById("radio-choose-color");
+//        form.onchange = function() {
+//            let choice = form.value;
+//            alert(choice);
+//        }
+//        
+//        alert("next");
+//        
+//        }
     alert("Game over!");
     //gameOn = false;
     
