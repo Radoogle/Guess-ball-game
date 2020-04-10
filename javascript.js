@@ -4,6 +4,7 @@ var slider = document.getElementById("range"),
     outputR = document.getElementById("outputRed"),
     inputBalls = document.getElementById("input-all-balls"),
     totalBalls = inputBalls.value,
+    chooseDiv = document.getElementById("choose-container"),
     gameOn = false;
 
 slider.max = totalBalls;
@@ -11,9 +12,8 @@ slider.value = totalBalls / 2;
 updateRatio();
 
 if (!gameOn) {
-    document.getElementById("choose-container").style.display = "none";
+    chooseDiv.style.display = "none";
 }
-
 
 inputBalls.oninput = function () {
     totalBalls = inputBalls.value;
@@ -51,11 +51,21 @@ function randomColor(min = 1, max = 10) {
     else return "red";
 }
 
+function showOptions() {
+    chooseDiv.style.display = "block";
+    //chooseDiv.style.visibility = "hidden";
+}
+
 function go() {
     let total = totalBalls;
     let color;
     gameOn = true;
-    document.getElementById("choose-container").style.display = "block";
+    showOptions();
+    
+    let form = document.getElementById("radio-choose-color");
+    let choice = form.value;
+    alert(choice);
+    
 //    while (total-- > 0) {
 //        color = randomColor();
 //        let form = document.getElementById("radio-choose-color");
@@ -71,3 +81,4 @@ function go() {
     //gameOn = false;
     
 }
+

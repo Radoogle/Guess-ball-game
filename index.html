@@ -20,21 +20,22 @@
             <button id="hide-btn" onclick="openCloseAboutWindow()">Hide</button>
     </div>
     <main id="main">
-        <form onsubmit="go()">
+        <form onsubmit="">
             <label for="input-all-balls">Total number of balls (2 - 50):</label>
-            <input type="number" min="2" max="50" id="input-all-balls" name="input-all-balls" value="10">
+            <input type="number" min="2" max="50" id="input-all-balls" name="input-all-balls" value="3">
             <br>
             <label for="range">Set the ratio between blue and red balls: </label>
             <input type="range" id="range" name="range" min="0" max="document.getElementById('input-all-balls').value">
                 <b style="color:blue;"> Blue: <span id="outputBlue"></span></b><b style="color:red;"> Red: <span id="outputRed"></span></b>
             <br>
-            <button type="submit" id="submit">GO!</button>
+            <button type="button" id="submit" onclick="go()"> GO!</button>
+            
         </form>
         <div id="choose-container">
             <form id="radio-choose-color">
-                <input type="radio" name="blue" id="chose-blue" checked>
+                <input type="radio" name="radio-choose-color" id="chose-blue" checked>
                 <label for="chose-blue"><b style="color:blue;">Blue</b></label>
-                <input type="radio" name="red" id="chose-red">
+                <input type="radio" name="radio-choose-color" id="chose-red">
                 <label for="chose-red"><b style="color:red;">Red</b></label>
             </form>
         </div>
